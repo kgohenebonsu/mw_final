@@ -1,0 +1,159 @@
+
+	<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- @author: Kwabena Gyekye Ohene-Bonsu
+	Mobile Web Final Project (2014)
+	C2015 | MIS
+	16/12/2014 -->
+
+	<link rel = "stylesheet" href = "jquery.mobile-1.4.4.min.css">
+		<script src = "jquery-1.11.1.min.js"></script>
+	<script src = "jquery.mobile-1.4.4.min.js"></script> 
+	<script type = "text/javascript" src = "functions.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+</head>
+<body>
+
+	<!-- Page One -->
+	<div data-role = "page" id = "pageone" data-theme="b">
+	<div data-role = "header">
+		<div align="center">
+		<img src="foot.png" width="150" height="150">
+		<img src="foot1.png" width="150" height="150">
+		</div>
+		<!-- <h3>IWuzHeirSom<br>Company</h3> -->
+	<div data-role="navbar">
+					<ul>
+						<li>
+					<a href="#pageone" class="ui-btn-active ui-state-persist" data-icon="user" data-transition = "slideup">Registration</a>
+						</li>
+						<li>
+					<a href="#pagetwo" data-icon="grid" data-transition = "slidefade">Attend a meeting</a>
+						</li>
+						</ul>
+						</div>
+	</div>
+
+	<div role = "main" class = "ui-content">
+				<br>
+
+		<div data-role="navbar">
+			<ul>
+				<li>
+			<center><i>Welcome to IWuzHeirSom Registration Portal</i></center>
+		</li>
+		</ul>
+		</div>
+		<br><br>
+			<script type="text/javascript">
+		  			  $(document).ready(function(){
+
+    					loadEvents();
+    					});
+		  			</script>
+		<div data-role="collapsible">
+				<h1>View Upcoming Events</h1>
+				<div align="center" id="allEvents"></div>
+			</div>
+			<br>
+			<br>
+			<p>Fill the form below to register</p><br>
+		<label for="fname">First Name</label>
+		<input type="text" name="fname" id="fname" placeholder="first name"><br>
+
+		<label for="cnumber">Last Name</label>
+		<input type="text" name="lname" id="lname" placeholder="last name"><br>
+
+		<label for="email">Email</label>
+		<input type="text" name="email" id="email" placeholder="example@gmail.com"><br>
+
+		<label for="email">Phone</label>
+		<input type="text" name="phone" id="phone" placeholder="number"><br>
+
+		<label for="email">Organization</label>
+		<input type="text" name="organization" id="organization" placeholder="organization"><br>
+
+		<input class="ui-btn ui-input-btn ui-corner-all ui-shadow ui-btn-inline" 
+		type="submit" data-inline="true" id="save_delegate" data-icon="check" value="Save Details">
+
+		<input class="ui-btn ui-input-btn ui-corner-all ui-shadow ui-btn-inline" 
+		type="submit" data-inline="true" data-icon="refresh" id="clear_delegate" value="Clear"><br>
+		<br>
+		<div id="status" align="center"></div><br><br>
+
+
+			<div data-role = "footer">
+				<h4>Kobby_Ohene's Event Registration App</h4>
+        	</div>
+		</div>
+	</div>
+
+
+	<!-- Page Two -->
+	<div data-role = "page" id = "pagetwo" data-theme="b">
+	<div data-role = "header">
+		<div align="center">
+		<img src="foot.png" width="150" height="150">
+		<img src="foot1.png" width="150" height="150">
+		</div>
+		<!-- <h3>IWuzHeirSom<br>Company</h3> -->
+	<div data-role="navbar">
+					<ul>
+						<li>
+					<a href="#pageone"  data-icon="user" data-transition = "slidedown">Registration</a>
+						</li>
+						<li>
+					<a href="#pagetwo" class="ui-btn-active ui-state-persist" data-icon="grid" 
+					data-transition = "pop">Attend a meeting</a>
+						</li>
+						</ul>
+						</div>
+	</div>
+
+	<div role = "main" class = "ui-content">
+				<br>
+
+		<div data-role="navbar">
+			<ul>
+				<li>
+			<center><i>Which of the events do you wish to attend Today?</i></center>
+		</li>
+		</ul>
+		</div>
+		<script type="text/javascript">
+		  			  $(document).ready(function(){
+
+    					loadListEvents();
+    					});
+		  			</script>
+		<br><br>
+			  <select name="select-conductor" id="allListEvents">
+                         <option>Select Event</option>
+                     </select><br>
+
+        <label for="email">Code from Administrator</label>
+		<input type="text" name="code" id="code" placeholder="****"><br>
+
+        <label for="id">Your ID</label>
+		<input type="text" name="pin" id="pin" placeholder="ID"><br>
+
+		<label for="contact">Your Contact</label>
+		<input type="text" name="phone" id="phonen" placeholder="phone"><br>
+
+			<input class="ui-btn ui-input-btn ui-corner-all ui-shadow ui-btn-inline" 
+		type="submit" data-inline="true" id="attend" data-icon="check" value="Submit Details">
+
+		<br>
+		<div id="status1" align="center"></div><br><br>
+
+			<div data-role = "footer">
+				<h4>Kobby_Ohene's Event Registration App</h4>
+        	</div>
+		</div>
+	</div>
+
+</body>
+</html>
